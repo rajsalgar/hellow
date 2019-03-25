@@ -1,0 +1,58 @@
+<h3>Inventory Certification Requests</h3>
+<h4>Certification Request Emails will be sent to 5 emails</h4>
+<ul>
+    <li>
+        <div class="label-title">
+            <p>Name</p>
+        </div>
+        <div class="label-value">
+            <p>{{ curInventoryName }}</p>
+        </div>
+    </li>
+    <li>
+        <div class="label-title">
+            <p>PDF</p>
+        </div>
+        <div class="label-value">
+            <a routerLink="/pdf_view">View</a>
+        </div>
+    </li>
+    <li>
+        <div class="label-title">
+            <p>From</p>
+        </div>
+        <div class="label-value">
+            <p>aa@bbb.com</p>
+        </div>
+    </li>
+    <li>
+        <div class="label-title">
+            <p>to</p>
+        </div>
+        <div class="label-value">
+            <p>{{ curInventoryEmail }}</p>
+        </div>
+    </li>
+    <li>
+        <div class="label-title">
+            <p>Subject</p>
+        </div>
+        <div class="label-value">
+            <!-- <input type="text" name="" id="" value="subject" [disabled]="readFlag == '0'"> -->
+            <input type="text" name="" id="" value="subject">
+        </div>
+    </li>
+    <li>
+        <div class="label-title">
+            <p>Email Body</p>
+        </div>
+        <div class="label-value">
+            <!-- <textarea name="" id="" cols="30" rows="10" [disabled]="readFlag == '0'">hello</textarea> -->
+            <textarea name="" id="" cols="30" rows="10">hello</textarea>
+        </div>
+    </li>
+</ul>
+<button mat-raised-button color="primary" cdkFocusInitial [disabled]="readFlag!='0'" (click)="clickMakeAsRead()">Make as Reviewd</button>
+<button mat-raised-button class="margin-10" [disabled]="readFlag == '0'" routerLink="/">Email</button>
+<button mat-raised-button class="margin-10" [disabled]="readFlag == '0'" routerLink="/">Hold</button>
+<button mat-raised-button class="margin-10" routerLink="/">Cancel</button>

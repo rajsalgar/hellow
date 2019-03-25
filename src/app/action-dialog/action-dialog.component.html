@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{(data.kind == 'accept') ? 'Accept Certification' : 'Reject Certification'}}</h1>
+<div mat-dialog-content>
+    <mat-list-item>
+        <div class="row">
+            <div class="label-title">Name</div>
+            <div class="label-value"></div>
+        </div>
+        <div class="row">
+            <div class="label-title">Reason</div>
+            <div class="label-value">
+                <textarea cols="30" rows="5" [(ngModel)]="body"></textarea>
+            </div>
+        </div>
+        <div class="row" *ngIf="data.kind == 'reject'">
+            <div class="label-title"></div>
+            <div class="label-value">
+                <mat-checkbox [(ngModel)]="resend_flag">Resend</mat-checkbox>
+            </div>
+        </div>
+    </mat-list-item>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" cdkFocusInitial (click)="onSaveClick()">Save</button>
+    <button mat-raised-button (click)="onNoClick()" class="margin-10">Cancel</button>
+</div>

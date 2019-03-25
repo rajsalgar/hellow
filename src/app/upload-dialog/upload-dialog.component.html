@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Inventory Certification Upload</h1>
+<div mat-dialog-content>
+  <mat-list-item>
+    <div class="row">
+      <div class="label-title">Company</div>
+      <div class="label-value">{{data.name}}</div>
+    </div>
+    <div class="row">
+      <div class="label-title">Certification Year</div>
+      <div class="label-value">{{data.statue}}</div>
+    </div>
+    <div class="row">
+      <div class="label-title">PDF File</div>
+      <div class="label-value">
+        <button mat-stroked-button (click)="pdfFileInput.click()">Browse Files</button>
+        <input type="file" hidden #pdfFileInput>
+      </div>
+    </div>
+    <div class="row">
+      <div class="label-title">Email File</div>
+      <div class="label-value">
+        <button mat-stroked-button (click)="emailFileInput.click()">Browse Files</button>
+        <input type="file" hidden #emailFileInput>
+      </div>
+    </div>
+  </mat-list-item>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="onSaveClick()">Save</button>
+  <button mat-raised-button (click)="onNoClick()" class="margin-10">Cancel</button>
+</div>

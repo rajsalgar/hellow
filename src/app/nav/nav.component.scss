@@ -1,0 +1,21 @@
+header {
+    background: #7700FF;
+    nav {
+        justify-self: left;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                a {
+                    padding: 1em;
+                    text-transform: uppercase;
+                    &:hover {
+                        background: #8F2BFF;
+                    }
+                }
+            }
+        }
+    }
+}

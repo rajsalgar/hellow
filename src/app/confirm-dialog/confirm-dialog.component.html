@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>{{(data.name == 'accept') ? 'Accept Certification' : 'Reject Certification'}}</h1>
+<div mat-dialog-content>
+    <mat-list-item>
+        <div class="row" *ngIf="data.kind == 'reject'">
+            <div class="label-title">Name</div>
+            <div class="label-value"></div>
+        </div>
+        <div class="row" *ngIf="data.kind == 'reject'">
+            <div class="label-title">PDF</div>
+            <div class="label-value"><a routerLink="pdf_view">Link</a></div>
+        </div>
+        <div class="row">
+            <div class="label-title">From</div>
+            <div class="label-value">aaa@bbb.com</div>
+        </div>
+        <div class="row">
+            <div class="label-title">To</div>
+            <div class="label-value">aaa@dom1.com, bbb@dom2.com</div>
+        </div>
+        <div class="row">
+            <div class="label-title">Email Subject</div>
+            <div class="label-value">
+                <input type="text" name="" id="" class="line-input">
+            </div>
+        </div>
+        <div class="row">
+            <div class="label-title">Email Body</div>
+            <div class="label-value">
+                <textarea cols="30" rows="5">{{data.body}}</textarea>
+            </div>
+        </div>
+    </mat-list-item>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" cdkFocusInitial (click)="onEmailClick()">Email</button>
+    <button mat-raised-button (click)="onCancelClick()" class="margin-10">Cancel</button>
+</div>

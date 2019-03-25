@@ -1,0 +1,48 @@
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"><a routerLink="/profile/{{dataSource.filteredData.indexOf(element)}}"> {{element.name}} </a></td>
+        </ng-container>
+
+        <ng-container matColumnDef="Num">
+            <th mat-header-cell *matHeaderCellDef> Num </th>
+            <td mat-cell *matCellDef="let element"> {{element.num}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Statue">
+            <th mat-header-cell *matHeaderCellDef> Statue </th>
+            <td mat-cell *matCellDef="let element"> {{element.statue}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element">
+                <mat-checkbox *ngIf="element.flag == '1'" (click)="clickCheckBox(dataSource.filteredData.indexOf(element))">Send Request</mat-checkbox>
+                <mat-checkbox *ngIf="element.flag == '2'" (click)="clickCheckBox(dataSource.filteredData.indexOf(element))">Reminder Request</mat-checkbox>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Inventory">
+            <th mat-header-cell *matHeaderCellDef> Inventory </th>
+            <td mat-cell *matCellDef="let element">
+                <a mat-button color="primary" *ngIf="element.inventory == '0'" routerLink="/review/{{dataSource.filteredData.indexOf(element)}}">Preview Certification Request</a>
+                <button mat-button color="warn" *ngIf="element.inventory == '1'" (click)="openDialog(dataSource.filteredData.indexOf(element));">Upload Certification</button>
+                <button mat-button color="accent" *ngIf="element.inventory == '2'" routerLink="/review/{{dataSource.filteredData.indexOf(element)}}">Review Inventory</button>
+                <!-- <button mat-button color="accent" *ngIf="element.inventory == '2'" (click)="openRequest(dataSource.filteredDa ta.indexOf(element));">Review Inventory</button> -->
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Email Address">
+            <th mat-header-cell *matHeaderCellDef> Email Address </th>
+            <td mat-cell *matCellDef="let element"> {{element.email_address}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+<button mat-raised-button color="primary" class="submit-btn" (click)="submitRequest();">Submit</button>

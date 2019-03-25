@@ -1,0 +1,79 @@
+<h3>Inventory Certification Requests</h3>
+<div *ngIf="lssuerData.length > 0">
+    <h4>Certification Request Emails will be sent to 5 emails</h4>
+    <ul>
+        <li *ngFor="let issuer of lssuerData">
+            <div class="label-title">
+                <!-- <p>Issuer Name {{lssuerData.indexOf(issuer) + 1}}</p> -->
+                <p>{{issuer.name}} {{issuer.email}}</p>
+            </div>
+            <div class="label-value">
+                <!-- <p>{{issuer.name}} {{issuer.email}}</p> -->
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>Subject</p>
+            </div>
+            <div class="label-value">
+                <input type="text" name="" id="">
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>Body</p>
+            </div>
+            <div class="label-value">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>From Email</p>
+            </div>
+            <div class="label-value">
+                <p>aa@bbb.com</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div *ngIf="remineIssuerData.length > 0">
+    <h4>Reminder Email will be sent to</h4>
+    <ul>
+        <li *ngFor="let reminder of remineIssuerData">
+            <div class="label-title">
+                <!-- <p>Issuer Name {{remineIssuerData.indexOf(reminder) + 1}}</p> -->
+                <p>{{reminder.name}} {{reminder.email}}</p>
+            </div>
+            <div class="label-value">
+                <!-- <p>{{reminder.name}} {{reminder.email}}</p> -->
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>Subject</p>
+            </div>
+            <div class="label-value">
+                <input type="text" name="" id="">
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>Body</p>
+            </div>
+            <div class="label-value">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </li>
+        <li>
+            <div class="label-title">
+                <p>From Email</p>
+            </div>
+            <div class="label-value">
+                <p>aa@www.com</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<button mat-raised-button color="primary" routerLink="/" cdkFocusInitial>Save Email</button>
+<button mat-raised-button class="margin-10" routerLink="/">Cancel</button>

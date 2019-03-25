@@ -1,0 +1,86 @@
+<mat-grid-list cols="9" rowHeight="65px">
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Name1" value="{{ curInventoryName }}" disabled>
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1" *ngFor="let num of ['2', '3 *']">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Name{{num}}">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="2">
+        <div class="input-form line-div">
+            <p class="p-line">Line1</p>
+            <p class="p-line">Line2</p>
+            <input type="text" name="" id="" class="line-input" disabled>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="2">
+        <div class="input-form line-div">
+            <p class="p-line">Line3</p>
+            <p class="p-line">Line4</p>
+            <input type="text" name="" id="" class="line-input">
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="2">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <div class="input-form line-div">
+            <p class="p-line">Name4*</p>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <div class="input-form line-div">
+            <p class="p-line">Name5*</p>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+    </mat-grid-tile>
+
+    <div *ngFor="let currency of currencies">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <div class="input-form line-div">
+                <p class="p-line">{{currency}}</p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <mat-form-field class="input-field">
+                    <input matInput>
+                </mat-form-field>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <mat-form-field class="input-field">
+                    <input matInput>
+                </mat-form-field>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="1">
+        </mat-grid-tile>
+    </div>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="1" *ngFor="let num of ['6 *', '7 *', '8 *', '9 *', 10, 11, '12 *', '13', '14', '15', '16', 17]">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Name{{num}}">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <button mat-raised-button color="primary" (click)="actionButton()">Save</button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <button mat-raised-button (click)="actionButton()">Cancel</button>
+    </mat-grid-tile>
+</mat-grid-list>

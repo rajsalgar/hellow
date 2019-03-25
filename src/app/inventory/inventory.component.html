@@ -1,0 +1,495 @@
+<h3>Title</h3>
+<mat-grid-list cols="4" rowHeight="65px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <form class="input-form">
+            <p>Line 1</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <form class="input-form">
+            <p>Line 2</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 1</p>
+            <!-- <mat-form-field class="input-field">
+                <input matInput placeholder="Label 1">
+            </mat-form-field> -->
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of [2, 3, 4, 5]">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Label {{item}}">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Label 6">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="3" rowHeight="65px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of [7, 10, 13, 8, 11, 14, 8, 12, 15]">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Line {{item}}">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="8" rowHeight="65px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="Line 16">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>1) Header1</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 17</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of header1">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 18</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of value">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 19</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of header1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput value="0">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 20</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of value">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>2) Header2</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>a) header2a</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 21</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <mat-label>Yes/No/Do Not Know Prepopulate</mat-label>
+                <mat-select>
+                    <mat-option>Yes/No/Do Not Know Prepopulate</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 22</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Value *<br>(As of Dec 31, 2019)</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput value="0">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <form class="input-form">
+            <p>Label23</p>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="3">
+        <form class="input-form">
+            <p>Label24</p>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="3">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>b) header2b</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-25">1) header2a1</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Label 25</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Label 26</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput value="0">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-25">2) header2a2</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Label 27</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <p>{{item}}</p>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Label 28</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of currencies">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput value="0">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>3) Header3</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 29</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p>Label 30</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+
+    <div *ngFor="let item of currencies">
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <p class="text-right">{{item}}</p>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <mat-form-field class="input-field">
+                    <input matInput value="">
+                </mat-form-field>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <mat-form-field class="input-field">
+                    <input matInput value="">
+                </mat-form-field>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+        </mat-grid-tile>
+    </div>
+
+    <div *ngFor="let item of [1, 3]">
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            Label {{30 + item}}<br>Label {{31 + item}}
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <form class="input-form">
+                <mat-form-field class="input-field">
+                    <input matInput value="">
+                </mat-form-field>
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="1">
+        </mat-grid-tile>
+    </div>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        Label 35<br>Label 36
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <mat-checkbox class="input-field"></mat-checkbox>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>4) Header4</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        Label 37
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput value="">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <mat-checkbox class="input-field"></mat-checkbox>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>5) Header5</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Long paragraph</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <form class="input-form">
+            <p class="text-right">USD</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Long para end</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <h4>6) Header6</h4>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-25">Line 1</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-25">1) Line 2</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Line 3<br> Line 4</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-25">2) Line 5</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Line 3<br> Line 4</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="6" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Label 38</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput placeholder="">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <form class="input-form">
+            <p class="padding-45">Date *</p>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <form class="input-form">
+            <mat-form-field class="input-field">
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1">
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+<button mat-raised-button color="primary" class="action-btn" (click)="openDialog('accept');">Accept</button>
+<button mat-raised-button class="action-btn" (click)="openDialog('reject');">Reject</button>
